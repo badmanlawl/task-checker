@@ -1,0 +1,253 @@
+/* START - Init */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* END - Init */
+
+/* START - Overlay */
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0, 0.35);
+	display: none;
+}
+
+.overlay-content {
+	position: relative;
+	top: 20%;
+	width: 480px;
+	margin: auto;
+	background-color: white;
+	border: 1px solid black;
+}
+
+.overlay-title-bar {
+	padding: 8px;
+	border-bottom: 1px solid black;
+	font-weight: bold;
+}
+
+.overlay-alert {
+	margin: 8px;
+	margin-bottom: 0;
+	padding: 4px;
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid black;    
+}
+
+.overlay-alert-close::after {
+	padding: 4px;
+	content: "x";
+}
+
+.overlay-content-prompt {
+	padding: 8px;
+	display: none;
+	border-bottom: 1px solid black;
+}
+
+.overlay-content-task {
+	padding: 8px;
+	display: none;
+	flex-direction: column;
+	border-bottom: 1px solid black;
+}
+
+.overlay-content-task > label {
+	margin-bottom: 2px;
+}
+
+.overlay-content-task > input:not(:last-child) {
+	margin-bottom: 6px;
+}
+
+.overlay-actions {
+	padding: 8px;
+	text-align: right;
+}
+
+/* #txt-title {
+
+} */
+
+#txt-description {
+	padding: 0 1px;
+	resize: none;
+}
+
+/* END - Overlay */
+
+/* START - Drop down menu (Task category) */
+
+.task-category {
+	padding: 1px;
+	position: relative;
+	display: inline-block;
+	border: 1px solid black;
+}
+
+.task-category-list {
+	margin: 0;
+	padding: 0;
+	width: 120px;
+	display: none;
+	position: absolute;
+	left: -1px;
+	background-color: white;
+	border: 1px solid black;
+	list-style-type: none;
+}
+
+.task-category-selected::before {
+	content: "▼ ";
+}
+
+.task-category:hover .task-category-list {
+	display: block;
+}
+
+.task-category-list > li:hover {
+	background-color: lightgray;
+}
+
+/* END - Drop down menu (Task category) */
+
+/* START - Navbar */
+
+.task-navbar {
+	margin-bottom: 4px;
+	padding: 4px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid black;
+}
+
+.task-navbar-left {
+	display: flex;
+	align-items: baseline;
+}
+
+.task-navbar-right {
+	display: flex;
+}
+
+.task-navbar-left > div, .task-navbar-left > button, .task-navbar-right > button:not(:last-child) {
+	margin-right: 4px;
+}
+
+/* END - Navbar */
+
+/* START - Main */
+
+.container {
+	margin: auto;
+	width: clamp(600px, 90%, 960px); /* FIX THIS */
+}
+
+.title {
+	padding: 4px;
+	border: 1px solid black;
+	border-bottom: 0;
+}
+
+.title > p:first-child {
+	font-weight: bold;
+}
+
+.task-main {
+	padding: 4px;
+	border: 1px solid black;
+	border-bottom: 0;
+}
+
+/* END - Main */
+
+/* START - Table */
+
+.task-table-container {
+	padding-bottom: 24px;
+	min-height: 240px;
+	border: 1px solid black;
+}
+
+.table-empty::after {
+	width: 100%;
+	margin-top: 16px;
+	display: block;
+	text-align: center;
+	content: "There's nothing here...";
+}
+
+.task-table {
+	width: 100%;
+	table-layout: auto;
+	border-collapse: collapse;
+}
+
+.task-table-body > tr > td {
+	vertical-align: top;
+}
+
+.task-table-body > tr {
+	border-bottom: 1px solid black;
+}
+
+.task-table-body > tr > td:not(:last-child) {
+	border-right: 1px solid black;
+}
+
+.task-check {
+	width: 0;
+}
+
+.task-check > input {
+	margin: 8px;
+}
+
+.task-title {
+	width: 33%;
+	padding: 4px;
+}
+
+.task-description {
+	width: 60%;
+	padding: 4px;
+}
+
+.task-title, .task-description {
+	line-height: 1.5;
+}
+
+.task-actions {
+	text-align: center;
+}
+
+/* END - Table */
+
+/* START - Footer */
+
+footer {
+	padding: 4px;
+	text-align: center;
+	border: 1px solid black;    
+}
+
+/* END - Footer */

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Task Checker</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+
+<body>
+	<!-- START Overlay -->
+	<div class="overlay">
+		<div class="overlay-content">
+			<div class="overlay-title-bar">
+				<p class="overlay-title">Add Task</p>
+			</div>
+			<div class="overlay-alert">
+				<p class="overlay-alert-text">Error</p>
+				<span class="overlay-alert-close"></span>
+			</div>
+			<div class="overlay-content-prompt">
+				<p>Are you sure you want to clear all the tasks?</p>
+			</div>
+			<div class="overlay-content-task">
+				<label for="txt-title">Task</label>
+				<input type="text" name="txt-title" id="txt-title" maxlength="120" max placeholder="Enter the task...">
+				<label for="txt-description">Description</label>
+				<textarea id="txt-description" rows="5" maxlength="500" placeholder="Describe the task..."></textarea>
+			</div>
+			<div class="overlay-actions">
+				<button id="btn-overlay-confirm">Yes</button>
+				<button id="btn-overlay-cancel">No</button>
+			</div>
+		</div>
+	</div>
+	<!-- END Overlay -->
+	<div class="container">
+		<div class="title">
+			<p>Task Checker</p>
+			<p>Made with vanilla JavaScript</p>
+		</div>
+		<div class="task-main">
+			<div class="task-navbar">
+				<div class="task-navbar-left">
+					<!-- START Drop down menu (Task category) -->
+					<div class="task-category">
+						<p class="task-category-selected">All (0)</p>
+						<ul class="task-category-list">
+							<li>Active (0)</li>
+							<li>Completed (0)</li>
+						</ul>
+					</div>
+					<!-- END Drop down menu (Task category) -->
+					<button id="btn-clear">Clear completed tasks</button>
+					<button id="btn-clear-all">Clear all tasks</button>
+				</div>
+				<div class="task-navbar-right">
+					<input type="text" id="txt-search" maxlength="30" placeholder="Search task by title..."><button
+						id="btn-search">🔎</button>
+					<button id="btn-add">➕</button>
+				</div>
+			</div>
+			<div class="task-table-container">
+				<table class="task-table">
+					<tbody class="task-table-body">
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<footer>
+			<p>Made by <a target="_" href="https://github.com/badmanlawl">Badman</a> — 2021</p>
+		</footer>
+	</div>
+</body>
+
+</html>
