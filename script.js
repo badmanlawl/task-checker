@@ -65,7 +65,7 @@ const overlayPromptState = (id) => {
 	}
 }
 
-// Function for displaying the following: (Add task, ***Edit task)
+// Function for displaying the following: (Add task, Edit task)
 const overlayTaskState = (id) => {
 	// Switch between the displays of prompt overlay and task overlay
 	overlayPrompt.style.display = "none"
@@ -74,7 +74,7 @@ const overlayTaskState = (id) => {
 	// Switch the labels of the actions buttons
 	buttonOverlayCancel.textContent = "Cancel"
 
-	// Switch the labels of each actions (Add task, ***Edit task)
+	// Switch the labels of each actions (Add task, Edit task)
 	switch (id) {
 		case 0:
 			overlayTitle.textContent = overlayTitleList[3]
@@ -101,7 +101,7 @@ const overlayAlertState = (id) => {
 
 
 // Table functions
-// Actions for the confirmation button (Add Task, Edit Task, Clear Actions)
+// Actions for the confirmation button (Add Task, Edit Task, *Clear Actions)
 const actionConfirm = (id) => {
 	switch (id) {
 		case 4:

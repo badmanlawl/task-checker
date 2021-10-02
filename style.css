@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: sans-serif;
 	font-size: 12px;
 }
 
@@ -83,13 +83,8 @@ body {
 	text-align: right;
 }
 
-/* #txt-title {
-
-} */
-
-#txt-description {
-	padding: 0 1px;
-	resize: none;
+.overlay-actions > button {
+	font-weight: bold;
 }
 
 /* END - Overlay */
@@ -97,7 +92,6 @@ body {
 /* START - Drop down menu (Task category) */
 
 .task-category {
-	padding: 1px;
 	position: relative;
 	display: inline-block;
 	border: 1px solid black;
@@ -115,16 +109,22 @@ body {
 	list-style-type: none;
 }
 
-.task-category-selected::before {
-	content: "▼ ";
-}
-
 .task-category:hover .task-category-list {
 	display: block;
 }
 
-.task-category-list > li:hover {
-	background-color: lightgray;
+.task-category-selected {
+	padding: 2px;
+	padding-right: 4px;
+	font-weight: bold;
+}
+
+.task-category-selected::before {
+	content: "▼ ";
+}
+
+.task-category-list > li {
+	padding: 2px;
 }
 
 /* END - Drop down menu (Task category) */
@@ -170,6 +170,7 @@ body {
 
 .title > p:first-child {
 	font-weight: bold;
+	font-size: 14px;
 }
 
 .task-main {
@@ -183,9 +184,10 @@ body {
 /* START - Table */
 
 .task-table-container {
-	padding-bottom: 24px;
-	min-height: 240px;
+	padding-bottom: 64px;
+	height: 360px;
 	border: 1px solid black;
+	overflow-y: auto;
 }
 
 .table-empty::after {
@@ -225,10 +227,11 @@ body {
 .task-title {
 	width: 33%;
 	padding: 4px;
+	font-weight: bold;
 }
 
 .task-description {
-	width: 60%;
+	width: 65%;
 	padding: 4px;
 }
 
@@ -237,6 +240,7 @@ body {
 }
 
 .task-actions {
+	padding: 4px;
 	text-align: center;
 }
 
@@ -247,7 +251,44 @@ body {
 footer {
 	padding: 4px;
 	text-align: center;
-	border: 1px solid black;    
+	border: 1px solid black;
+	font-weight: bold;
 }
 
 /* END - Footer */
+
+/* START - Behaviors */
+
+button, input, textarea {
+	padding: 2px;
+	border: 1px solid black;
+	border-radius: 0;
+	background-color: white;
+}
+
+button:hover, .task-category:hover, .task-category-list > li:hover {
+	background-color: #dbdbdb;
+	cursor: pointer;
+}
+
+button:active, .task-category-list > li:active {
+	background-color: #cfcfcf;
+}
+
+.btn-edit {
+	border-bottom: 0;
+}
+
+#txt-search {
+	border-right: 0;
+}
+
+#txt-description {
+	resize: none;
+}
+
+*:focus {
+	outline: 2px solid cornflowerblue;
+}
+
+/* END - Behaviors */
