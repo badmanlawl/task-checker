@@ -8,4 +8,4 @@ Task Checker is a standard to-do list made with vanilla JavaScript presented wit
 - Sort the tasks by the status (active or completed)
 
 ## Note
-Although this is a to-do list, the data is not saved to a database. I’ll probably implement one once I figure out which framework I’ll be using. 
+Although this is a to-do list, the data is not saved to a database (dunno how to do that with vanilla JavaScript apart from using localStorage). I’ll probably implement one once I figure out which framework I’ll be using. 
